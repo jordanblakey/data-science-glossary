@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS only checkboxes</title>
+    <style>
+    input[type=checkbox] {
+      font-size: 24px;
+      position: relative;
+      border: 6px solid #000;
+      width: 1.6em;
+      height: 1.6em;
+      -webkit-appearance: none;
+    }
+
+    input[type=checkbox]:active {
+        background: rgba(0,255,0,1);
+        border-color:rgba(0,255,0,1);
+    }
+
+    input[type=checkbox]:focus {
+        outline: 0;
+    }
+
+    input[type=checkbox]:checked, input[type=checkbox]:checked::after{
+        border-color:rgba(0,255,0,1);
+    }
+
+    input[type=checkbox]:checked::after {
+      position: absolute;
+      content: '';
+      left: 5%;
+      top: -60%;
+      height: 60%;
+      width: 160%;
+      -webkit-box-shadow: -6px 6px 0 rgba(0,255,0,1);
+      -webkit-transform: rotate(-45deg);
+    }
+    </style>
+
+</head>
+<body>
+
+    <input type="checkbox" name="some_name" value="" checked="">
+</body>
+</html>
